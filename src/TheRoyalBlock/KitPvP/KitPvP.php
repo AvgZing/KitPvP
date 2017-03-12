@@ -59,7 +59,10 @@ class KitPvP extends PluginBase implements Listener {
 		$player = $event->getPlayer();
 		$name = $player->getName();
 		
+		@mkdir($this->getDataFolder());
+		@mkdir($this->getDataFolder()."Players");
 		@mkdir($this->getDataFolder()."Players/".strtolower($name{0}));
+		@mkdir($this->getDataFolder()."Players/c/console.yml");
 		
 		$PlayerFile = new Config($this->getDataFolder()."Players/".strtolower($name{0})."/".strtolower($name).".yml", Config::YAML);
 		
