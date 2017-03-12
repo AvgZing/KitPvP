@@ -1,5 +1,5 @@
 <?php
-namespace BlawoHD;
+namespace TheRoyalBlock\KitPvP;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -234,7 +234,8 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->sendMessage($this->prefix."Required Coins§7:§6 150");
 								}
 								
-							} else { //gekauft
+							} else { //If already bought:
+  
 								if($sender instanceof Player){
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
@@ -279,7 +280,8 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->sendMessage($this->prefix."Required Coins§7:§6 200");
 								}
 								
-							} else { //gekauft
+							} else { //If already bought:
+  
 								if($sender instanceof Player){
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
@@ -326,7 +328,8 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->sendMessage($this->prefix."Required Coins§7:§6 360");
 								}
 								
-							} else { //gekauft
+							} else { //If already bought:
+  
 								if($sender instanceof Player){
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
@@ -371,7 +374,8 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->sendMessage($this->prefix."Required Coins§7:§6 500");
 								}
 								
-							} else { //gekauft
+							} else { //If already bought:
+  
 								if($sender instanceof Player){
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
@@ -405,7 +409,7 @@ class KitPvP extends PluginBase implements Listener {
 									
 									$PlayerFile->save();
 									
-									$sender->sendMessage($this->prefix."§aYou have sucessfully purchased the kit §fTurbo §afir§6 750 coins, you can use it anytime with the Command §f/kit turbo §ause!");
+									$sender->sendMessage($this->prefix."§aYou have sucessfully purchased the kit §fTurbo §afor§6 750 coins, you can use it anytime with the Command §f/kit turbo §ause!");
 									
 								} else {
 									$sender->sendMessage($this->prefix."§cYou do not have enough coins to purchase the kit §fTurbo");
@@ -417,7 +421,8 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->sendMessage($this->prefix."Required Coins§7:§6 750");
 								}
 								
-							} else { //gekauft
+							} else { //If already bought:
+  
 								if($sender instanceof Player){
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
@@ -463,7 +468,8 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->sendMessage($this->prefix."Required Coins§7:§6 800");
 								}
 								
-							} else { //gekauft
+							} else { //If already bought:
+  
 								if($sender instanceof Player){
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
@@ -507,7 +513,8 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->sendMessage($this->prefix."Required Coins§7:§6 1000");
 								}
 								
-							} else { //gekauft
+							} else { //If already bought:
+  
 								if($sender instanceof Player){
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
