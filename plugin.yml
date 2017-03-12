@@ -4,31 +4,31 @@ version: 1.0.0
 api: [1.0.0, 2.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA4]
 main: BlawoHD\KitPvP
 description: "KitPvP Plugin for an amazing server!"
-commands:
-     Kits:
+commands: 
+    Kits:
          Description: List the kits.
-     Kit:
+    Kit:
          Description: Command for the kit selection.
-     spawn:
+    spawn:
          Description: Teleport to the spawn. (Calculates you a death!)
-     Fashion:
+    Fashion:
          Description: TEAMINTERN.
          Aliases: [m]
-     Feed:
+    Feed:
          Description: Fills the hunger bar.
-     Heal:
+    Heal:
          Description: Fills the life display.
-     Spc:
+    Spc:
          Description: TEAMINTERN.
-     Cinv:
+    Cinv:
          Description: InventoryClear.
-     Gethealth:
+    Gethealth:
          Description: get Health.
-     Coins:
+    Coins:
          Description: get coins.
-     Setcoins:
+    Setcoins:
          Description: set coins.
-     Addcoins:
+    Addcoins:
          Description: add coins.
 Permissions:
      Vanish.use:
