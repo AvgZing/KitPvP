@@ -145,7 +145,7 @@ Class KitPvP extends PluginBase implements listener {
         If (! Empty ($args [0]) &&! Empty ($args [1])) {
 
           $Targetname = $args [0];
-          If (file_exists ($this->getDataFolder()."Players/".strtolower($targetname {0})."/".strtolower($targetname);
+          If (file_exists ($this->getDataFolder()."Players/".strtolower($targetname {0})."/".strtolower($targetname)){
           $TargetFile = new Config ($this->getDataFolder ()."Players/".strtolower($targetname {0})."/".strtolower($targetname)."Yml", Config :: YAML);
 
           $TargetFile->set("Coins", (int) $args [1]);
