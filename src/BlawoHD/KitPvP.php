@@ -556,7 +556,8 @@ class KitPvP extends PluginBase implements Listener {
                     $sender->sendMessage($this->prefix . "§aYour gamemode has been changed to §cSPECTATOR!");
                     $sender->setGamemode(3);
                 }
-				}$sender->sendMessage("Ingame only!")
+				}
+			$sender->sendMessage("Ingame only!")
                 break;
             case "feed":
                 if ($sender->isOP() && $sender instanceof Player) {
