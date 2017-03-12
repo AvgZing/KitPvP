@@ -19,12 +19,12 @@ class KitPvP extends PluginBase implements Listener {
 //=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=
     public function onEnable() {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $This->getServer()->getLogger()->info ($this->prefix."§aKitPvP enabled!");
+        $this->getServer()->getLogger()->info ($this->prefix."§aKitPvP enabled!");
 		@mkdir($this->getDataFolder());
 		@mkdir($this->getDataFolder()."Players");
     }
     public function onDisable() {
-        $This->getServer()->getLogger()->info ($this->prefix."§cKitPvP disabled!");
+        $this->getServer()->getLogger()->info ($this->prefix."§cKitPvP disabled!");
   }
 //=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=
 	public function onDrop(PlayerDropItemEvent $event) {
@@ -618,3 +618,4 @@ class KitPvP extends PluginBase implements Listener {
 		}
     }
 }
+?>
