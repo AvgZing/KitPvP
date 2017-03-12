@@ -1,8 +1,8 @@
 name: KitPvP
-author: BlawoHD
+author: TheRoyalBlock
 version: 1.0.0
 api: [1.0.0, 2.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA4]
-main: BlawoHD\KitPvP
+main: TheRoyalBlock\KitPvP\KitPvP
 description: "KitPvP Plugin for an amazing server!"
 commands:
     kits:
