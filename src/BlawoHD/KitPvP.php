@@ -45,8 +45,7 @@ Class KitPvP extends PluginBase implements listener {
       $Killer = $cause->getDamager ();
       If ($killer instanceof Player) {
         $Name = $killer->getName ();
-        $TargetFile = new Config ($this->getDataFolder ()."Players /" strtolower ($name {0})."/" Strtolower ($name)."Yml", Config :: YAML);
-
+        $TargetFile = new Config($this->getDataFolder()."Players/".strtolower($name{0})."/".strtolower($name).".yml", Config::YAML);
         $Targetcoins = $TargetFile->get("Coins");
         $NewCoins = $targetcoins + 10;
         $Addedcoins = 10;
