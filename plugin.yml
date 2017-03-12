@@ -4,38 +4,38 @@ version: 1.0.0
 main: BlawoHD\KitPvP
 author: BlawoHD
 commands:
-    kits:
-        description: Listet dir die Kits auf.
-    kit:
-        description: Command fuer die KitAuswahl.
-    spawn:
-        description: Teleportiert dich zum Spawn. (Rechnet dir einen Tod an!)
-    mode:
-        description: TEAMINTERN.
-        aliases: [m]
-    feed:
-        description: Fuellt die Hungerleiste.
-    heal:
-        description: Fuellt die Lebensanzeige.
-    spc:
-        description: TEAMINTERN.
-    cinv:
-        description: InventarClear.
-    gethealth:
-        description: get Health.
-    coins:
-        description: get coins.
-    setcoins:
-        description: set coins.
-    addcoins:
-        description: add coins.
-permissions:
-    vanish.use:
-        description: Permission um den Vanish Command zu benutzen.
-        default: false
-    kits.vip:
-        description: VIP-Kits nutzen.
-        default: false
-    kits.ultra:
-        description: UltraKits nutzen.
-        default: false
+    Kits:
+         Description: List the kits.
+     Kit
+         Description: Command for the kit selection.
+     spawn:
+         Description: Teleport to the spawn. (Calculates you a death!)
+     Fashion:
+         Description: TEAMINTERN.
+         Aliases: [m]
+     Feed:
+         Description: Fills the hunger bar.
+     Heal
+         Description: Fills the life display.
+     Spc:
+         Description: TEAMINTERN.
+     Cinv:
+         Description: InventoryClear.
+     Gethealth:
+         Description: get Health.
+     Coins:
+         Description: get coins.
+     Setcoins:
+         Description: set coins.
+     Addcoins:
+         Description: add coins.
+Permissions:
+     Vanish.use:
+         Description: Permission to use the Vanish command.
+         Default: false
+     Kits.vip:
+         Description: VIP kits use.
+         Default: false
+     Kits.ultra:
+         Description: Use UltraKits.
+         Default: false
