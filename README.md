@@ -9,3 +9,12 @@ Warrior 500 coins<Br>
 Turbo 750 coins<Br>
 King 800 coins<Br>
 Knight 1000 coins<Br>
+
+### Knight Stuff Recieved
+
+All Diamond Armor<Br>
+2 Diamond Swords<Br>
+2 Diamond Pickaxes<Br>
+16 Golden Apples<Br>
+Speed Effect for max time<Br>
+Water breathing for max time<Br>
