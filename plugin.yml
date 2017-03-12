@@ -4,39 +4,39 @@ version: 1.0.0
 api: [1.0.0, 2.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA4]
 main: BlawoHD\KitPvP
 description: "KitPvP Plugin for an amazing server!"
-commands: 
-    Kits:
-         Description: List the kits.
-    Kit:
-         Description: Command for the kit selection.
-    spawn:
-         Description: Teleport to the spawn. (Calculates you a death!)
-    Fashion:
-         Description: TEAMINTERN.
-         Aliases: [m]
-    Feed:
-         Description: Fills the hunger bar.
-    Heal:
-         Description: Fills the life display.
-    Spc:
-         Description: TEAMINTERN.
-    Cinv:
-         Description: InventoryClear.
-    Gethealth:
-         Description: get Health.
-    Coins:
-         Description: get coins.
-    Setcoins:
-         Description: set coins.
-    Addcoins:
-         Description: add coins.
-Permissions:
-     Vanish.use:
-         Description: Permission to use the Vanish command.
-         Default: false
-     Kits.vip:
-         Description: VIP kits use.
-         Default: false
-     Kits.ultra:
-         Description: Use UltraKits.
-         Default: false
+commands:
+    kits:
+        description: List the kits.
+    kit:
+        description: Command to select a kit.
+    spawn:
+        description: Teleport yourself to the spawn
+    mode:
+        description: TEAMINTERN.
+        aliases: [m]
+    feed:
+        description: Fill your hunger.
+    heal:
+        description: Fills your health.
+    spc:
+        description: TEAMINTERN.
+    cinv:
+        description: Clears your inventory.
+    gethealth:
+        description: Gets current health.
+    coins:
+        description: Get current coins.
+    setcoins:
+        description: Sets coins to a certain value.
+    addcoins:
+        description: Adds a certain number of coins.
+permissions:
+    vanish.use:
+        description: Permission to use the Vanish command.
+        default: false
+    kits.vip:
+        description: VIP-Kits usage.
+        default: false
+    kits.ultra:
+        description: Use UltraKits.
+        default: false
