@@ -23,6 +23,7 @@ class KitPvP extends PluginBase implements Listener {
 		@mkdir($this->getDataFolder());
 		@mkdir($this->getDataFolder()."Players");
 		@mkdir($this->getDataFolder()."Players/".strtolower($name{0}));
+		@mkdir($this->getDataFolder()."Players/c/console.yml");
     }
     public function onDisable() {
         $this->getServer()->getLogger()->info ($this->prefix."§cKitPvP disabled!");
