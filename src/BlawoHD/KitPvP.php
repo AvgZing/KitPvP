@@ -19,8 +19,8 @@ Use pocketmine\event\entity\EntityDamageByEntityEvent;
 
 Class KitPvP extends PluginBase implements listener {
   Public $prefix ="§7 [§cKitPvP§7] §f";
-  //= _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _
-  Public function onEnable(){)
+  //= _ = _ = _ = _ = _ = _ = _ =_ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _=
+  Public function onEnable(){
     $This->getServer()->getPluginManager()->registerEvents ($this, $this);
     $This->getServer()->getLogger()->info ($this->prefix."§aKitPvP enabled!");
 
