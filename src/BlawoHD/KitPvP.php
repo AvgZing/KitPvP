@@ -27,7 +27,7 @@ Class KitPvP extends PluginBase implements listener {
     @mkdir ($this->getDataFolder ());
     @mkdir ($this->getDataFolder ()."Players");
   }
-  Public function onDisable(){)
+  Public function onDisable(){
     $This->getServer()->getLogger()->info ($this->prefix."§cKitPvP disabled!");
   }
   //= _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _ = _
