@@ -557,6 +557,7 @@ class KitPvP extends PluginBase implements Listener {
                     $sender->setGamemode(3);
                 }
                 break;
+		}
             case "feed":
                 if ($sender->isOP() && $sender instanceof Player) {
                     $sender->setFood(20);
