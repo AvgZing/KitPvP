@@ -12,14 +12,13 @@ commands:
     spawn:
         description: Teleport yourself to the spawn
     mode:
-        description: TEAMINTERN.
-        aliases: [m]
+        description: Changes gamemode.
     feed:
         description: Fill your hunger.
     heal:
         description: Fills your health.
     spc:
-        description: TEAMINTERN.
+        description: Vanish Mode.
     cinv:
         description: Clears your inventory.
     gethealth:
