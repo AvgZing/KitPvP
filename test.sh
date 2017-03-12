@@ -25,7 +25,7 @@ wp="install_log/log_wget_php"
 
 	mkdir install_log
 	echo "system> Installing Tesseract..."
-	wget --no-check-certificate https://github.com/H4PM/Elywing/archive/master.zip >>./$w 2>>./$w
+	wget --no-check-certificate https://github.com/TesseractTeam/Tesseract/archive/master.zip >>./$w 2>>./$w
   	chmod 777 master.zip >>./$l 2>>./$le
 	unzip -o master.zip >>./$l 2>>./$le
 	chmod 777 Tesseract-master >>./$l 2>>./$le
@@ -35,8 +35,8 @@ wp="install_log/log_wget_php"
 	cd .. >>../$l 2>>../$le
 	rm -rf Tesseract-master >>./$l 2>>./$le
 	rm -rf master.zip >>./$l 2>>./$le
-        wget --no-check-certificate https://raw.githubusercontent.com/H4PM/Elywing/master/start.sh >>./$l 2>>./$le
-        wget --no-check-certificate https://raw.githubusercontent.com/H4PM/Elywing/master/LICENSE.md >>./$l 2>>./$le
+        wget --no-check-certificate https://raw.githubusercontent.com/TesseractTeam/Tesseract/master/start.sh >>./$l 2>>./$le
+        wget --no-check-certificate https://raw.githubusercontent.com/TesseractTeam/Tesseract/master/LICENSE.md >>./$l 2>>./$le
         chmod 755 start.sh >>./$l 2>>./$le
 	echo
 	echo "system> Installing PHP binary..."
