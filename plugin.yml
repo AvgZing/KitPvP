@@ -1,12 +1,13 @@
 name: KitPvP
-api: [1.0.0, 2.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA4]
-version: 1.0.0
-main: BlawoHD\KitPvP
 author: BlawoHD
+version: 1.0.0
+api: [1.0.0, 2.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA4]
+main: BlawoHD\KitPvP
+description: "KitPvP Plugin for an amazing server!"
 commands:
     Kits:
          Description: List the kits.
-     Kit
+     Kit:
          Description: Command for the kit selection.
      spawn:
          Description: Teleport to the spawn. (Calculates you a death!)
@@ -15,7 +16,7 @@ commands:
          Aliases: [m]
      Feed:
          Description: Fills the hunger bar.
-     Heal
+     Heal:
          Description: Fills the life display.
      Spc:
          Description: TEAMINTERN.
