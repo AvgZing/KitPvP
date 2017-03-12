@@ -85,7 +85,7 @@ Class KitPvP extends PluginBase implements listener {
   Public function onCommand (CommandSender $sender, Command $cmd, $lable, array $args) {
 
     $Name = $sender->getName ();
-    $PlayerFile = new Config ($this->getDataFolder ()."Players/".strtolower($name {0})"/".strtolower($name)."Yml", Config :: YAML);
+    $PlayerFile = new Config ($this->getDataFolder ()."Players/".strtolower($name {0})."/".strtolower($name)."Yml", Config :: YAML);
 
     $Kits = $PlayerFile->get("Kits");
     $Coins = $PlayerFile->get("Coins");
@@ -145,8 +145,8 @@ Class KitPvP extends PluginBase implements listener {
         If (! Empty ($args [0]) &&! Empty ($args [1])) {
 
           $Targetname = $args [0];
-          If (file_exists ($this->getDataFolder()"Players/".strtolower($targetname {0})"/".strtolower($targetname)
-          $TargetFile = new Config ($this->getDataFolder ()."Players/".strtolower($targetname {0})"/".strtolower($targetname)."Yml", Config :: YAML);
+          If (file_exists ($this->getDataFolder()"Players/".strtolower($targetname {0})."/".strtolower($targetname)
+          $TargetFile = new Config ($this->getDataFolder ()."Players/".strtolower($targetname {0})."/".strtolower($targetname)."Yml", Config :: YAML);
 
           $TargetFile->set("Coins", (int) $args [1]);
           $TargetFile->save ();
@@ -166,8 +166,8 @@ Class KitPvP extends PluginBase implements listener {
       If (! Empty ($args [0]) &&! Empty ($args [1])) {
 
         $Targetname = $args [0];
-        If (file_exists ($this->getDataFolder()"Players/".strtolower($targetname {0})"/".strtolower($targetname)
-        $TargetFile = new Config ($this->getDataFolder ()."Players/".strtolower($targetname {0})"/".strtolower($targetname)."Yml", Config :: YAML);
+        If (file_exists ($this->getDataFolder()"Players/".strtolower($targetname {0})."/".strtolower($targetname)
+        $TargetFile = new Config ($this->getDataFolder ()."Players/".strtolower($targetname {0})."/".strtolower($targetname)."Yml", Config :: YAML);
 
         $Targetcoins = $TargetFile->get("Coins");
         $NewCoins = $targetcoins + (int) $args [1];
