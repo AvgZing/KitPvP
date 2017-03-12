@@ -243,7 +243,7 @@ Class KitPvP extends PluginBase implements listener {
             $Sender->sendMessage ($this->prefix."Required Coins§7: §6 150");
           }
 
-        } Else {//);
+        } Else {
           If ($sender instanceof Player) {
             $Sender->removeAllEffects ();
             $Sender->getInventory()->clearAll ();
@@ -288,7 +288,7 @@ Class KitPvP extends PluginBase implements listener {
             $Sender->sendMessage ($this->prefix."Required Coins§7: §6 800");
           }
 
-        } Else {//);
+        } Else {
           If ($sender instanceof Player) {
             $Sender->removeAllEffects ();
             $Sender->getInventory()->clearAll ();
@@ -332,7 +332,7 @@ Class KitPvP extends PluginBase implements listener {
             $Sender->sendMessage ($this->prefix."Required Coins§7: §6 1000");
           }
 
-        } Else {//);
+        } Else {
           If ($sender instanceof Player) {
             $Sender->removeAllEffects ();
             $Sender->getInventory()->clearAll ();
