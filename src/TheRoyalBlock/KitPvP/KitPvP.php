@@ -78,8 +78,8 @@ class KitPvP extends PluginBase implements Listener {
 		$name = $sender->getName();
 		$PlayerFile = new Config($this->getDataFolder()."Players/".strtolower($name{0})."/".strtolower($name).".yml", Config::YAML);
 		
-		$kits = $PlayerFile->get("Kits");
-		$coins = $PlayerFile->get("Coins");
+		$kits = $PlayerFile->get("Kits",[]);
+		$coins = $PlayerFile->get("Coins",[]);
 		
         switch ($cmd->getName()) {
             case "kits":
