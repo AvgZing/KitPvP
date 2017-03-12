@@ -5,7 +5,7 @@ api: [1.0.0, 2.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA4]
 main: BlawoHD\KitPvP
 description: "KitPvP Plugin for an amazing server!"
 commands:
-    Kits:
+     Kits:
          Description: List the kits.
      Kit:
          Description: Command for the kit selection.
