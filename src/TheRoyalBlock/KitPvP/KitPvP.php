@@ -485,7 +485,11 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->getInventory()->addItem(Item::get(283, 0, 2));
 									$sender->getInventory()->addItem(Item::get(285, 0, 2));
 									$sender->getInventory()->addItem(Item::get(322, 0, 12));
-									$sender->getInventory()->addItem(Item::get(403:22, 0, 12));
+									$enchantment = Enchantment::getEnchantment(22);
+									$enchantment->setLevel(1);
+									$book = Item::get(403, 0, 1);
+									$book->addEnchantment($enchantment);
+									$sender->getInventory()->addItem(Item::get($book));
 									$sender->addEffect(Effect::getEffect(11)->setAmplifier(0)->setDuration(199980)->setVisible(false));
 								} else {
 									$sender->sendMessage($this->prefix . "§fKit only available ingame :D");
