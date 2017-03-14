@@ -338,14 +338,14 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
 									$sender->sendMessage($this->prefix . "§fKit §o§l§aArcher §r§fuse");
-									$sender->getInventory()->addItem(Item::get(267, 195, 1));
-									$sender->getInventory()->addItem(Item::get(261, 0, 1));
-									$sender->getInventory()->addItem(Item::get(262, 0, 40));
-									$sender->getInventory()->addItem(Item::get(260, 0, 20));
-									$sender->getInventory()->addItem(Item::get(322, 0, 2));
-									$sender->getInventory()->setChestplate(Item::get(299, 0, 1));
-									$sender->getInventory()->setLeggings(Item::get(300, 0, 1));
-									$sender->addEffect(Effect::getEffect(11)->setAmplifier(0)->setDuration(199980)->setVisible(false));
+									$sender->getInventory()->addItem(Item::get(261 0, 2));
+									$sender->getInventory()->addItem(Item::get(262 0, 128));
+									$sender->getInventory()->addItem(Item::get(396, 16));
+									$sender->getInventory()->addItem(Item::get(354, 0, 1));
+									$sender->getInventory()->setHelmet(Item::get(298, 0, 1));
+									$sender->getInventory()->setChestplate(Item::get(299, 1));
+									$sender->getInventory()->setLeggings(Item::get(300 0, 1));
+									$sender->getInventory()->setBoots(Item::get(301 0, 1));
 								} else {
 									$sender->sendMessage($this->prefix . "§fKit only available ingame :D");
 								}
