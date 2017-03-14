@@ -76,3 +76,6 @@ A Gold Hoe<br>
 1 Wooden Axe<br>
 1 Wooden Hoe<br>
 16 Mushroom Stew<br>
+
+# Licence
+https://choosealicence.com/no-licence/
