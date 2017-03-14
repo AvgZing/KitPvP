@@ -67,3 +67,4 @@ A Gold Hoe<br>
 3 Emeralds<br>
 64 Cooked Chicken (OOOH)<br>
 32 Baked Potatoes<br>
+2 maps<br>
