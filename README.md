@@ -68,3 +68,11 @@ A Gold Hoe<br>
 64 Cooked Chicken (OOOH)<br>
 32 Baked Potatoes<br>
 2 maps<br>
+### Viking (the default) stuff recieved
+#### Sorry, you're not special. Upgrade to get stuff! You just get some wooden tools and some mushroom stew.
+1 Wooden Sword<br>
+1 Wooden Shovel<br>
+1 Wooden Pickaxe<br>
+1 Wooden Axe<br>
+1 Wooden Hoe<br>
+16 Mushroom Stew<br>
