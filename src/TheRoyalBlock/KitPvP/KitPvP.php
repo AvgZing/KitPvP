@@ -630,5 +630,20 @@ class KitPvP extends PluginBase implements Listener {
 				}
 		}
     }
+	public function onMove(PlayerMoveEvent $event){
+		$player = $event->getPlayer();
+		$x = $player->getX();
+		$y = $player->getY();
+		$z = $player->getZ();
+		$level = $player->getLevel();
+		$block = $level->getBlock(new Vector3($x, $y-1, $z));
+		if($block->getID() == 41){
+			$direction = $player->getDirectionVector();
+			$dx = $direction->getX();
+			$dz = $direction->getZ();
+			$player->knockBack($player, 0, $dx, $dz, 0.8);
+			$player->setHealth(20);
+		}
+	}
 }
 ?>
