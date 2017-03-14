@@ -20,6 +20,7 @@ use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\event\entity\EntityLevelChangeEvent; 
+use pocketmine\event\player\PlayerDropItemEvent;
 //Inventory
 use pocketmine\inventory\ChestInventory;
 use pocketmine\inventory\EnderChestInventory;
