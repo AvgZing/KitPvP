@@ -68,6 +68,7 @@ A Gold Hoe<br>
 64 Cooked Chicken (OOOH)<br>
 32 Baked Potatoes<br>
 2 maps<br>
+Jump Boost for Max Time (For jumping higher to climb the mountains!) <BR>
 
 ### Ninja Stuff Recieved
 #### Really you're this cheap? You don't get any armor but you still get stone tools and a fair bit of food!
