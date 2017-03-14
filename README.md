@@ -79,3 +79,10 @@ A Gold Hoe<br>
 
 # Licence
 https://choosealicence.com/no-licence/
+
+# Credits:
+### Roles: Translated and rewrote a lot
+## Name: TheRoyalBlock
+<br><br>
+### Roles: Coded the base of the plugin, but left it unfinished
+## Name: BlawoHD
