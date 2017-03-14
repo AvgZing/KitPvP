@@ -21,3 +21,4 @@ script:
 - ls /home/travis/build/artifacts/plugins/KitPvP
 - cd ../
 - php plugins/KitPvP/Travis.php
+# Test?
