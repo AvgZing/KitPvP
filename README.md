@@ -68,6 +68,18 @@ A Gold Hoe<br>
 64 Cooked Chicken (OOOH)<br>
 32 Baked Potatoes<br>
 2 maps<br>
+
+### Ninja Stuff Recieved
+#### Really you're this cheap? You don't get any armor but you still get stone tools and a fair bit of food!
+1 Stone Sword<br>
+1 Stone Shovel<br>
+1 Stone Pickaxe<br>
+1 Stone Axe<br>
+1 Stone Hoe<br>
+32 Mushroom stew<br>
+16 baked potatoes<br>
+16 cooked chicken<br>
+
 ### Viking (the default) stuff recieved
 #### Sorry, you're not special. Upgrade to get stuff! You just get some wooden tools and some mushroom stew.
 1 Wooden Sword<br>
