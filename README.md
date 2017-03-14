@@ -71,7 +71,7 @@ A Gold Hoe<br>
 
 ### Ninja Stuff Recieved
 #### Really you're this cheap? You don't get any armor but you still get stone tools and a fair bit of food!
-1 Stone Sword<br>
+2 Stone Sword<br>
 1 Stone Shovel<br>
 1 Stone Pickaxe<br>
 1 Stone Axe<br>
