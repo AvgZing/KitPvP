@@ -243,14 +243,14 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
 									$sender->sendMessage($this->prefix . "§fKit §o§l§bNinja §r§frecieved");
-									$sender->getInventory()->addItem(Item::get(276, 1010, 1));
-									$sender->getInventory()->addItem(Item::get(322, 0, 2));
-									$sender->getInventory()->addItem(Item::get(260, 0, 20));
-									$sender->getInventory()->setHelmet(Item::get(298, 0, 1));
-									$sender->getInventory()->setChestplate(Item::get(299, 0, 1));
-									$sender->getInventory()->setLeggings(Item::get(300, 0, 1));
-									$sender->getInventory()->setBoots(Item::get(301, 0, 1));
-									$sender->addEffect(Effect::getEffect(1)->setAmplifier(1)->setDuration(199980)->setVisible(false));
+									$sender->getInventory()->addItem(Item::get(272, 0, 2));
+									$sender->getInventory()->addItem(Item::get(273, 0, 1));
+									$sender->getInventory()->addItem(Item::get(274, 0, 1));
+									$sender->getInventory()->addItem(Item::get(275, 0, 1));
+									$sender->getInventory()->addItem(Item::get(291, 0, 1));
+									$sender->getInventory()->addItem(Item::get(282, 0, 32));
+									$sender->getInventory()->addItem(Item::get(393, 0, 16));
+									$sender->getInventory()->addItem(Item::get(366, 0, 16));
 								} else {
 									$sender->sendMessage($this->prefix . "§fKit is only available ingame :D");
 								}
@@ -289,15 +289,16 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
 									$sender->sendMessage($this->prefix . "§fKit §o§l§cMario §r§frecieved");
-									$sender->getInventory()->addItem(Item::get(268, 10, 1));
-									$sender->getInventory()->addItem(Item::get(282, 0, 4));
-									$sender->getInventory()->addItem(Item::get(40, 0, 15));
-									$sender->getInventory()->addItem(Item::get(39, 0, 15));
-									$sender->getInventory()->addItem(Item::get(322, 0, 2));
-									$sender->getInventory()->setHelmet(Item::get(298, 0, 1));
-									$sender->getInventory()->setChestplate(Item::get(299, 0, 1));
-									$sender->getInventory()->setLeggings(Item::get(300, 0, 1));
-									$sender->getInventory()->setBoots(Item::get(301, 0, 1));
+									$sender->getInventory()->addItem(Item::get(294, 0, 1));
+									$sender->getInventory()->addItem(Item::get(388, 0, 3));
+									$sender->getInventory()->addItem(Item::get(366, 0, 64));
+									$sender->getInventory()->addItem(Item::get(393, 0, 32));
+									$sender->getInventory()->addItem(Item::get(395, 0, 1));
+									$sender->getInventory()->addItem(Item::get(358, 0, 1));
+									$sender->getInventory()->setHelmet(Item::get(302, 0, 1));
+									$sender->getInventory()->setChestplate(Item::get(303, 0, 1));
+									$sender->getInventory()->setLeggings(Item::get(304, 0, 1));
+									$sender->getInventory()->setBoots(Item::get(305, 0, 1));
 									$sender->addEffect(Effect::getEffect(8)->setAmplifier(3)->setDuration(199980)->setVisible(false));
 								} else {
 									$sender->sendMessage($this->prefix . "§fKit only available ingame :D");
