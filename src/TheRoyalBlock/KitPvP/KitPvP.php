@@ -439,6 +439,7 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->getInventory()->addItem(Item::get(357, 0, 16));
 									$sender->addEffect(Effect::getEffect(1)->setAmplifier(0)->setDuration(199980)->setVisible(false));
 									$sender->addEffect(Effect::getEffect(5)->setAmplifier(0)->setDuration(199980)->setVisible(false));
+									$sender->addEffect(Effect::getEffect(8)->setAmplifier(0)->setDuration(199980)->setVisible(false));
 								} else {
 									$sender->sendMessage($this->prefix . "§fKit only available ingame :D");
 								}
@@ -484,6 +485,7 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->getInventory()->addItem(Item::get(283, 0, 2));
 									$sender->getInventory()->addItem(Item::get(285, 0, 2));
 									$sender->getInventory()->addItem(Item::get(322, 0, 12));
+									$sender->getInventory()->addItem(Item::get(403:22, 0, 12));
 									$sender->addEffect(Effect::getEffect(11)->setAmplifier(0)->setDuration(199980)->setVisible(false));
 								} else {
 									$sender->sendMessage($this->prefix . "§fKit only available ingame :D");
@@ -546,8 +548,8 @@ class KitPvP extends PluginBase implements Listener {
             case "spawn":
                 $sender->getInventory()->clearAll();
                 $sender->removeAllEffects();
-                $sender->sendMessage($this->prefix . "§aYou are now on the spawn.");
-                $sender->setHealth(0);
+                $sender->setHealth(0); //lol thats one way of doing it!
+		$sender->getInventory()->addItem(Item::get(322, 0, 12));
                 break;
             case "mode":
                 if (!$sender instanceof Player) {
