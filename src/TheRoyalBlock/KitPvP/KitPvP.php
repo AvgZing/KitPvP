@@ -232,12 +232,12 @@ class KitPvP extends PluginBase implements Listener {
 								$sender->removeAllEffects();
 								$sender->getInventory()->clearAll();
 								$sender->sendMessage($this->prefix . "§fKit §o§l§8Survivor §r§frecieved");
-								$sender->getInventory()->addItem(Item::get(268, 0, 1));
-								$sender->getInventory()->addItem(Item::get(269, 0, 1));
-								$sender->getInventory()->addItem(Item::get(270, 0, 1));
-								$sender->getInventory()->addItem(Item::get(271, 0, 1));
-								$sender->getInventory()->addItem(Item::get(290, 0, 1));
-								$sender->getInventory()->addItem(Item::get(282, 0, 16));
+								$sender->getInventory()->setHelmet(Item::get(298, 0, 1));
+								$sender->getInventory()->setChestplate(Item::get(299, 0, 1));
+								$sender->getInventory()->setLeggings(Item::get(300, 0, 1));
+								$sender->getInventory()->setBoots(Item::get(301, 0, 1));
+								$sender->getInventory()->addItem(Item::get(276, 0, 1));
+								$sender->getInventory()->addItem(Item::get(322, 0, 6));
 							} else {
 								$sender->sendMessage($this->prefix . "§fKit only available ingame:D");
 							}
