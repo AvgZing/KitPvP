@@ -129,42 +129,37 @@ class KitPvP extends PluginBase implements Listener {
             case "kits":
 				
 				$sender->sendMessage("§7=_=_=_=_=_=_=_=_=_");
-				$sender->sendMessage(" §7- §8Vikings §7[§aPurchased§7]");
+				$sender->sendMessage(" §7- §8Survivor §7[§aPurchased§7]");
 				
 				if(in_array("Ninja", $kits)){
-					$sender->sendMessage(" §7- §bNinja §7[§aPurchased§7]");
+					$sender->sendMessage(" §7- §bManiac §7[§aPurchased§7]");
 				} else {
-					$sender->sendMessage(" §7- §bNinja §7[§c150 coins§7]");
+					$sender->sendMessage(" §7- §bManiac §7[§c150 coins§7]");
 				}
 				if(in_array("Mario", $kits)){
-					$sender->sendMessage(" §7- §cMario §7[§aPurchased§7]");
+					$sender->sendMessage(" §7- §cPrisoner §7[§aPurchased§7]");
 				} else {
-					$sender->sendMessage(" §7- §cMario §7[§c200 coins§7]");
+					$sender->sendMessage(" §7- §cPrisoner §7[§c200 coins§7]");
 				}
 				if(in_array("Archer", $kits)){
-					$sender->sendMessage(" §7- §aArcher §7[§aPurchased§7]");
+					$sender->sendMessage(" §7- §aSolid §7[§aPurchased§7]");
 				} else {
-					$sender->sendMessage(" §7- §aArcher §7[§c360 coins§7]");
+					$sender->sendMessage(" §7- §aSolid §7[§c360 coins§7]");
 				}
 				if(in_array("Warrior", $kits)){
-					$sender->sendMessage(" §7- §4Warrior §7[§aPurchased§7]");
+					$sender->sendMessage(" §7- §4Demolisher §7[§aPurchased§7]");
 				} else {
-					$sender->sendMessage(" §7- §4Warrior §7[§c500 coins§7]");
+					$sender->sendMessage(" §7- §4Demolisher §7[§c500 coins§7]");
 				}
 				if(in_array("Turbo", $kits)){
-					$sender->sendMessage(" §7- §fTurbo §7[§aPurchased§7]");
+					$sender->sendMessage(" §7- §fLucky §7[§aPurchased§7]");
 				} else {
-					$sender->sendMessage(" §7- §fTurbo §7[§c750 coins§7]");
+					$sender->sendMessage(" §7- §fLucky §7[§c750 coins§7]");
 				}
 				if(in_array("King", $kits)){
-					$sender->sendMessage(" §7- §6King §7[§aPurchased§7]");
+					$sender->sendMessage(" §7- §6Mad §7[§aPurchased§7]");
 				} else {
-					$sender->sendMessage(" §7- §6King §7[§c800 coins§7]");
-				}
-				if(in_array("Knight", $kits)){
-					$sender->sendMessage(" §7- §7Knight §7[§aPurchased§7]");
-				} else {
-					$sender->sendMessage(" §7- §7Knight §7[§c1000 coins§7]");
+					$sender->sendMessage(" §7- §6Mad §7[§c800 coins§7]");
 				}
 				$sender->sendMessage("                     ");
 				$sender->sendMessage("§9Kit select§7:   ");
