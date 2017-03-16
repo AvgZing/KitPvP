@@ -465,14 +465,27 @@ class KitPvP extends PluginBase implements Listener {
 								if($sender instanceof Player){
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
-									$sender->sendMessage($this->prefix . "§fKit §o§l§4Lucky §r§frecieved");
-									$sender->getInventory()->addItem(Item::get(297, 0, 16));
-									$sender->getInventory()->addItem(Item::get(322, 0, 5));
-									$sender->getInventory()->addItem(Item::get(282, 0, 32));
-									$sender->getInventory()->addItem(Item::get(357, 0, 16));
-									$sender->addEffect(Effect::getEffect(1)->setAmplifier(0)->setDuration(199980)->setVisible(false));
-									$sender->addEffect(Effect::getEffect(5)->setAmplifier(0)->setDuration(199980)->setVisible(false));
-									$sender->addEffect(Effect::getEffect(8)->setAmplifier(0)->setDuration(199980)->setVisible(false));
+									$enchantmentdem1 = Enchantment::getEnchantment(0);
+									$enchantmentdem1->setLevel(1);
+									$enchantmentdem2 = Enchantment::getEnchantment(21);
+									$enchantmentdem2->setLevel(1);
+									$helmet = Item::get(310, 0, 1);
+									$chestplate = Item::get(311, 0, 1);
+									$leggings = Item::get(312, 0, 1);
+									$boots = Item::get(313, 0, 1);
+									$sword = Item::get(272, 0, 1);
+									$inv = player->getInventory();
+									$helmet->addEnchantment($enchantmentdem1);
+									$chestplate->addEnchantment($enchantmentdem1);
+									$leggings->addEnchantment($enchantmentdem1);
+									$boots->addEnchantment($enchantmentdem1);
+									$sword->addEnchantment($enchantmentdem2);
+									$inv->addItem($sword);
+									$sender->getInventory()->addItem(Item::get(322, 0, 2));
+									$inv->setHelmet($helmet);
+									$inv->setChestplate($chestplate);
+									$inv->setLeggings($leggings);
+									$inv->setBoots($boots);
 								} else {
 									$sender->sendMessage($this->prefix . "§fKit only available ingame :D");
 								}
