@@ -407,17 +407,27 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
 									$sender->sendMessage($this->prefix . "§fKit §o§l§4Demolisher §r§frecieved");
-									$sender->getInventory()->addItem(Item::get(276, 0, 1));
-									$sender->getInventory()->addItem(Item::get(283, 0, 1));
-									$sender->getInventory()->addItem(Item::get(267, 0, 2));
-									$sender->getInventory()->addItem(Item::get(268, 0, 3));
-									$sender->getInventory()->addItem(Item::get(282, 0, 32));
-									$sender->getInventory()->addItem(Item::get(413, 0, 16));
-									$sender->getInventory()->addItem(Item::get(354, 0, 2));
-									$sender->getInventory()->setHelmet(Item::get(306, 0, 1));
-									$sender->getInventory()->setChestplate(Item::get(307, 0, 1));
-									$sender->getInventory()->setLeggings(Item::get(308, 0, 1));
-									$sender->getInventory()->setBoots(Item::get(309, 0, 1));
+									$enchantmentdem1 = Enchantment::getEnchantment(0);
+									$enchantmentdem1->setLevel(1);
+									$enchantmentdem2 = Enchantment::getEnchantment(9);
+									$enchantmentdem2->setLevel(4);
+									$helmet = Item::get(306, 0, 1);
+									$chestplate = Item::get(307, 0, 1);
+									$leggings = Item::get(308, 0, 1);
+									$boots = Item::get(309, 0, 1);
+									$sword = Item::get(283, 0, 1);
+									$inv = player->getInventory();
+									$helmet->addEnchantment($enchantmentdem1);
+									$chestplate->addEnchantment($enchantmentdem1);
+									$leggings->addEnchantment($enchantmentdem1);
+									$boots->addEnchantment($enchantmentdem1);
+									$sword->addEnchantment($enchantmentdem2);
+									$inv->addItem($sword);
+									$sender->getInventory()->addItem(Item::get(322, 0, 5));
+									$inv->setHelmet($helmet);
+									$inv->setChestplate($chestplate);
+									$inv->setLeggings($leggings);
+									$inv->setBoots($boots);
 								} else {
 									$sender->sendMessage($this->prefix . "§fKit only available in game:D");
 								}
