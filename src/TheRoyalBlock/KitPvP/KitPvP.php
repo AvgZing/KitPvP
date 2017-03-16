@@ -275,14 +275,12 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
 									$sender->sendMessage($this->prefix . "§fKit §o§l§bManiac §r§frecieved");
-									$sender->getInventory()->addItem(Item::get(272, 0, 2));
-									$sender->getInventory()->addItem(Item::get(273, 0, 1));
-									$sender->getInventory()->addItem(Item::get(274, 0, 1));
-									$sender->getInventory()->addItem(Item::get(275, 0, 1));
-									$sender->getInventory()->addItem(Item::get(291, 0, 1));
-									$sender->getInventory()->addItem(Item::get(282, 0, 32));
-									$sender->getInventory()->addItem(Item::get(393, 0, 16));
-									$sender->getInventory()->addItem(Item::get(366, 0, 16));
+									$sender->getInventory()->setHelmet(Item::get(302, 0, 1));
+									$sender->getInventory()->setChestplate(Item::get(303, 0, 1));
+									$sender->getInventory()->setLeggings(Item::get(304, 0, 1));
+									$sender->getInventory()->setBoots(Item::get(305, 0, 1));
+									$sender->getInventory()->addItem(Item::get(283, 0, 1));
+									$sender->getInventory()->addItem(Item::get(322, 0, 3));
 								} else {
 									$sender->sendMessage($this->prefix . "§fKit is only available ingame :D");
 								}
