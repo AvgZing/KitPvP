@@ -117,7 +117,7 @@ class KitPvP extends PluginBase implements Listener {
 //=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=
 	
     public function onCommand(CommandSender $sender, Command $cmd, $lable, array $args) {
-		$dataFilezz = $this->getDataFolder() . strtolower($issuer->getName());
+		$dataFilezz = $this->getDataFolder() . strtolower($sender->getName());
 		$name = $sender->getName();
 		$PlayerFile = new Config($this->getDataFolder()."Players/".strtolower($name{0})."/".strtolower($name).".yml", Config::YAML);
 		
