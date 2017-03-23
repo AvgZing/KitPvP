@@ -540,15 +540,21 @@ class KitPvP extends PluginBase implements Listener {
 									$chestplate = Item::get(311, 0, 1);
 									$leggings = Item::get(312, 0, 1);
 									$boots = Item::get(313, 0, 1);
-									$sword = Item::get(272, 0, 1);
+									$sword = Item::get(276, 0, 1);
 									$inv = $sender->getInventory();
 									$helmet->addEnchantment($enchantmentdem1);
 									$chestplate->addEnchantment($enchantmentdem1);
 									$leggings->addEnchantment($enchantmentdem1);
 									$boots->addEnchantment($enchantmentdem1);
-									$sword->addEnchantment($enchantmentdem2);
+									$helmet->addEnchantment($enchantmentdem2);
+									$chestplate->addEnchantment($enchantmentdem2);
+									$leggings->addEnchantment($enchantmentdem2);
+									$boots->addEnchantment($enchantmentdem2);
+									$sword->addEnchantment($enchantmentdem3);
+									$sword->addEnchantment($enchantmentdem4);
+									$sword->addEnchantment($enchantmentdem5);
 									$inv->addItem($sword);
-									$sender->getInventory()->addItem(Item::get(322, 0, 2));
+									$sender->getInventory()->addItem(Item::get(322, 0, 16));
 									$inv->setHelmet($helmet);
 									$inv->setChestplate($chestplate);
 									$inv->setLeggings($leggings);
@@ -567,7 +573,7 @@ class KitPvP extends PluginBase implements Listener {
             case "spawn":
                 $sender->getInventory()->clearAll();
                 $sender->removeAllEffects();
-                $sender->setHealth(0); //lol thats one way of doing it!
+                $sender->setHealth(0); // Well, this works too!
 		$sender->getInventory()->addItem(Item::get(322, 0, 12));
                 break;
             case "mode":
