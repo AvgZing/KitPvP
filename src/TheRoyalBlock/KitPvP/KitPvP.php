@@ -117,7 +117,7 @@ class KitPvP extends PluginBase implements Listener {
 //=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=
 	
     public function onCommand(CommandSender $sender, Command $cmd, $lable, array $args) {
-		
+		$dataFilezz = $this->main->getDataFolder() . strtolower($issuer->getName());
 		$name = $sender->getName();
 		$PlayerFile = new Config($this->getDataFolder()."Players/".strtolower($name{0})."/".strtolower($name).".yml", Config::YAML);
 		
@@ -229,7 +229,19 @@ class KitPvP extends PluginBase implements Listener {
 						###Survivor###
 						if (strtolower($args[0] == "Survivor")) {
 							if($sender instanceof Player){
-								$sender->removeAllEffects();
+								if(is_file($dataFilezz)) {
+    								$data = yaml_parse_file($dataFilezz);
+    								$lastTime = $data["last-execute-command"][$cmd->getName()];
+  								} else {
+    								$lastTime = 0;
+  								}
+  								if(time() - $lastTime < 1200) { // Time in Seconds!!
+    								$issuer->sendMessage("Please wait for your cooldown to expire!");
+    								return true;
+  								}
+  								$data["last-execute-command"][$cmd->getName()] = time();
+  								yaml_emit_file($dataFilezz, $data);
+  								$sender->removeAllEffects();
 								$sender->getInventory()->clearAll();
 								$sender->sendMessage($this->prefix . "§fKit §o§l§8Survivor §r§frecieved");
 								$sender->getInventory()->setHelmet(Item::get(298, 0, 1));
@@ -238,6 +250,8 @@ class KitPvP extends PluginBase implements Listener {
 								$sender->getInventory()->setBoots(Item::get(301, 0, 1));
 								$sender->getInventory()->addItem(Item::get(276, 0, 1));
 								$sender->getInventory()->addItem(Item::get(322, 0, 6));
+  								return true;
+								
 							} else {
 								$sender->sendMessage($this->prefix . "§fKit only available ingame:D");
 							}
@@ -574,7 +588,6 @@ class KitPvP extends PluginBase implements Listener {
                 $sender->getInventory()->clearAll();
                 $sender->removeAllEffects();
                 $sender->setHealth(0); // Well, this works too!
-		$sender->getInventory()->addItem(Item::get(322, 0, 12));
                 break;
             case "mode":
                 if (!$sender instanceof Player) {
