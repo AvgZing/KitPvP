@@ -416,7 +416,7 @@ class KitPvP extends PluginBase implements Listener {
 									$leggings = Item::get(308, 0, 1);
 									$boots = Item::get(309, 0, 1);
 									$sword = Item::get(283, 0, 1);
-									$inv = player->getInventory();
+									$inv = $sender->getInventory();
 									$helmet->addEnchantment($enchantmentdem1);
 									$chestplate->addEnchantment($enchantmentdem1);
 									$leggings->addEnchantment($enchantmentdem1);
@@ -474,7 +474,7 @@ class KitPvP extends PluginBase implements Listener {
 									$leggings = Item::get(312, 0, 1);
 									$boots = Item::get(313, 0, 1);
 									$sword = Item::get(272, 0, 1);
-									$inv = player->getInventory();
+									$inv = $sender->getInventory();
 									$helmet->addEnchantment($enchantmentdem1);
 									$chestplate->addEnchantment($enchantmentdem1);
 									$leggings->addEnchantment($enchantmentdem1);
