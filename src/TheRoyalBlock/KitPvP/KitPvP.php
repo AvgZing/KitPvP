@@ -236,7 +236,7 @@ class KitPvP extends PluginBase implements Listener {
     								$lastTime = 0;
   								}
   								if(time() - $lastTime < 1200) { // Time in Seconds!!
-    								$timeLeft = time() - $lastTime
+    								$timeLeft = time() - $lastTime;
         							$sender->sendMessage("Please wait for your cooldown to expire! The cooldown expires in" . $timeLeft . "seconds!");
     								return true;
   								}
