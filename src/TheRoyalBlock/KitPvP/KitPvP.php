@@ -232,7 +232,7 @@ class KitPvP extends PluginBase implements Listener {
 							if($sender instanceof Player){
 								if(is_file($dataFilezz)) {
     								$data = yaml_parse_file($dataFilezz);
-    								$lastTime = $data["last-execute-command"][$cmd->getName()];
+    								$lastTime = $data["last-execute-command"][$args[0];
   								} else {
     								$lastTime = 0;
   								}
@@ -241,7 +241,7 @@ class KitPvP extends PluginBase implements Listener {
         							$sender->sendMessage("Please wait for your cooldown to expire! You last used your kit " . $timeLeft . " seconds ago, but you must wait 1200 seconds (20 minutes) until you may use it again!!");
     								return true;
   								}
-  								$data["last-execute-command"][$cmd->getName()] = time();
+  								$data["last-execute-command"][$args[0] = time();
   								yaml_emit_file($dataFilezz, $data);
   								$sender->removeAllEffects();
 								$sender->getInventory()->clearAll();
@@ -279,7 +279,7 @@ class KitPvP extends PluginBase implements Listener {
 								if($sender instanceof Player){
 									 if(is_file($dataFilezz)) {
     									$data = yaml_parse_file($dataFilezz);
-    									$lastTime = $data["last-execute-command"][$cmd->getName()];
+    									$lastTime = $data["last-execute-command"][$args[0];
   									} else {
     									$lastTime = 0;
   									}
@@ -288,7 +288,7 @@ class KitPvP extends PluginBase implements Listener {
 									    $sender->sendMessage("Please wait for your cooldown to expire! You last used your kit " . $timeLeft . " seconds ago, but you must wait 900 seconds (15 minutes) until you may use it again!!");
  									   return true;
  									 }
-									  $data["last-execute-command"][$cmd->getName()] = time();
+									  $data["last-execute-command"][$args[0] = time();
 									  yaml_emit_file($dataFilezz, $data);
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
@@ -337,7 +337,7 @@ class KitPvP extends PluginBase implements Listener {
 								if($sender instanceof Player){
 									  if(is_file($dataFilezz)) {
 									    $data = yaml_parse_file($dataFilezz);
-									    $lastTime = $data["last-execute-command"][$cmd->getName()];
+									    $lastTime = $data["last-execute-command"][$args[0];
  									 } else {
  									   $lastTime = 0;
  									 }
@@ -346,7 +346,7 @@ class KitPvP extends PluginBase implements Listener {
 									    $sender->sendMessage("Please wait for your cooldown to expire! You last used your kit " . $timeLeft . " seconds ago, but you must wait 600 seconds (10 minutes) until you may use it again!!");
 									    return true;
 									  }
-									  $data["last-execute-command"][$cmd->getName()] = time();
+									  $data["last-execute-command"][$args[0] = time();
 									  yaml_emit_file($dataFilezz, $data);
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
@@ -395,7 +395,7 @@ class KitPvP extends PluginBase implements Listener {
 								if($sender instanceof Player){
 									  if(is_file($dataFilezz)) {
 									    $data = yaml_parse_file($dataFilezz);
-									    $lastTime = $data["last-execute-command"][$cmd->getName()];
+									    $lastTime = $data["last-execute-command"][$args[0];
  									 } else {
  									   $lastTime = 0;
  									 }
@@ -404,7 +404,7 @@ class KitPvP extends PluginBase implements Listener {
 									    $sender->sendMessage("Please wait for your cooldown to expire! You last used your kit " . $timeLeft . " seconds ago, but you must wait 300 seconds (5 minutes) until you may use it again!!");
 									    return true;
 									  }
-									  $data["last-execute-command"][$cmd->getName()] = time();
+									  $data["last-execute-command"][$args[0] = time();
 									  yaml_emit_file($dataFilezz, $data);
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
@@ -453,7 +453,7 @@ class KitPvP extends PluginBase implements Listener {
 								if($sender instanceof Player){
 									  if(is_file($dataFilezz)) {
 									    $data = yaml_parse_file($dataFilezz);
-									    $lastTime = $data["last-execute-command"][$cmd->getName()];
+									    $lastTime = $data["last-execute-command"][$args[0];
  									 } else {
  									   $lastTime = 0;
  									 }
@@ -462,7 +462,7 @@ class KitPvP extends PluginBase implements Listener {
 									    $sender->sendMessage("Please wait for your cooldown to expire! You last used your kit " . $timeLeft . " seconds ago, but you must wait 300 seconds (5 minutes) until you may use it again!!");
 									    return true;
 									  }
-									  $data["last-execute-command"][$cmd->getName()] = time();
+									  $data["last-execute-command"][$args[0] = time();
 									  yaml_emit_file($dataFilezz, $data);
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
