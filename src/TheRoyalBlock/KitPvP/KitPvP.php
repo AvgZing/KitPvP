@@ -227,7 +227,7 @@ class KitPvP extends PluginBase implements Listener {
 						$sender->sendMessage("§6-> §f/kits");
 					} else {
 						###Survivor###
-						if (strtolower($args[0] == "Survivor")) {
+						if (strtolower($args[0] == "Survivor" xor $args[0] == "survivor")) {
 							if($sender instanceof Player){
 								if(is_file($dataFilezz)) {
     								$data = yaml_parse_file($dataFilezz);
@@ -258,34 +258,23 @@ class KitPvP extends PluginBase implements Listener {
 							}
 						}
 						###Maniac###
-						elseif (strtolower($args[0]) == "Maniac") {
-							
+						elseif (strtolower($args[0]) == "Maniac" xor $args[0] == "maniac") {
 							if(!in_array("Maniac", $kits)){
-								
 								if($coins >= 250){
-									
 									$newCoins = $coins - 250;
-									
 									$kits[] = "Maniac";
 									$PlayerFile->set("Kits", $kits);
 									$PlayerFile->set("Coins", $newCoins);
-									
 									$PlayerFile->save();
-									
 									$sender->sendMessage($this->prefix."§aYou have successfully purchased the kit §bManiac §afor§6 250 coins, you can now use it at any time with the command §f/kit Maniac §ause!");
-									
 								} else {
 									$sender->sendMessage($this->prefix."§cYou do not have enough coins to buy the kit §bManiac");
-									
 									$missingcoins = 250 - $coins;
-									
 									$sender->sendMessage($this->prefix."Available Coins§7: §6".$coins);
 									$sender->sendMessage($this->prefix."Missing Coins§7: §6".$missingcoins);
 									$sender->sendMessage($this->prefix."Required Coins§7:§6 250");
 								}
-								
 							} else { //If already bought:
-  
 								if($sender instanceof Player){
 									 if(is_file($dataFilezz)) {
     									$data = yaml_parse_file($dataFilezz);
@@ -316,7 +305,7 @@ class KitPvP extends PluginBase implements Listener {
 							}
 						}
 						###Prisoner###
-						elseif (strtolower($args[0]) == "Prisoner") {
+						elseif (strtolower($args[0]) == "Prisoner" xor $args[0] == "prisoner") {
 							
 							if(!in_array("Prisoner", $kits)){
 								
@@ -374,7 +363,7 @@ class KitPvP extends PluginBase implements Listener {
 							}
 						}
 						###Solid###
-						elseif (strtolower($args[0]) == "Solid") {
+						elseif (strtolower($args[0]) == "Solid" xor $args[0] == "solid") {
 							
 							if(!in_array("Solid", $kits)){
 								
@@ -432,7 +421,7 @@ class KitPvP extends PluginBase implements Listener {
 							}
 						}
 						###Demolisher###
-						elseif (strtolower($args[0]) == "Demolisher") {
+						elseif (strtolower($args[0]) == "Demolisher" xor $args[0] == "demolisher") {
 							
 							if(!in_array("Demolisher", $kits)){
 								
@@ -505,7 +494,7 @@ class KitPvP extends PluginBase implements Listener {
 							}
 						}
 						###Lucky###
-						elseif (strtolower($args[0]) == "Lucky") {
+						elseif (strtolower($args[0]) == "Lucky" xor $args[0] == "lucky") {
 							
 							if(!in_array("Lucky", $kits)){
 								
@@ -563,7 +552,7 @@ class KitPvP extends PluginBase implements Listener {
 							}
 						}
 						###Mad###
-						elseif (strtolower($args[0]) == "Mad") {
+						elseif (strtolower($args[0]) == "Mad" xor $args[0] == "mad") {
 							
 							if(!in_array("Mad", $kits)){
 								
