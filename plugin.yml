@@ -7,40 +7,28 @@ description: "KitPvP Plugin for an amazing server!"
 commands:
     kits:
         description: "List the kits."
-        usage: "/kits"
     kit:
         description: "Command to select a kit."
-        usage: "/kit <kitname>"
     spawn:
         description: "Teleport yourself to the spawn"
-        usage: "/spawn"
     mode:
         description: "Changes gamemode."
-        usage: "/mode <c|s|a|spc>"
     feed:
         description: "Fill your hunger."
-        usage: "/feed"
     heal:
         description: "Fills your health."
-        usage: "/heal"
     spc:
         description: "Vanish Mode."
-        usage: "/spc <+|->"
     cinv:
         description: "Clears your inventory."
-        usage: "/cinv"
     gethealth:
         description: "Gets current health."
-        usage: "/gethealth"
     coins:
         description: "Get current coins."
-        usage: "/coins"
     setcoins:
         description: "Sets coins to a certain value."
-        usage: "/setcoins <value>"
     addcoins:
         description: "Adds a certain number of coins."
-        usage: "/addcoins <value>"
 permissions:
     vanish.use:
         description: "Permission to use the Vanish command."
