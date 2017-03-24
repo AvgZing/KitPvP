@@ -27,6 +27,7 @@ use pocketmine\inventory\ChestInventory;
 use pocketmine\inventory\EnderChestInventory;
 //Item
 use pocketmine\item\Item;
+use pocketmine\item\enchantment\Enchantment;
 //Lang
 //Level
 use pocketmine\level\Level;
