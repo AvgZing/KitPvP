@@ -127,43 +127,44 @@ class KitPvP extends PluginBase implements Listener {
         switch ($cmd->getName()) {
             case "kits":
 				
-				$sender->sendMessage("§7=_=_=_=_=_=_=_=_=_");
-				$sender->sendMessage(" §7- §8Survivor §7[§aPurchased§7]");
+				$sender->sendMessage("§7=====================================");
+				$sender->sendMessage(" §7- §8survivor §7[§aPurchased§7]");
 				
 				if(in_array("Maniac", $kits)){
-					$sender->sendMessage(" §7- §bManiac §7[§aPurchased§7]");
+					$sender->sendMessage(" §7- §bmaniac §7[§aPurchased§7]");
 				} else {
-					$sender->sendMessage(" §7- §bManiac §7[§c250 coins§7]");
+					$sender->sendMessage(" §7- §bmaniac §7[§c250 coins§7]");
 				}
 				if(in_array("Prisoner", $kits)){
-					$sender->sendMessage(" §7- §cPrisoner §7[§aPurchased§7]");
+					$sender->sendMessage(" §7- §cprisoner §7[§aPurchased§7]");
 				} else {
-					$sender->sendMessage(" §7- §cPrisoner §7[§c500 coins§7]");
+					$sender->sendMessage(" §7- §cprisoner §7[§c500 coins§7]");
 				}
 				if(in_array("Solid", $kits)){
-					$sender->sendMessage(" §7- §aSolid §7[§aPurchased§7]");
+					$sender->sendMessage(" §7- §asolid §7[§aPurchased§7]");
 				} else {
-					$sender->sendMessage(" §7- §aSolid §7[§c750 coins§7]");
+					$sender->sendMessage(" §7- §asolid §7[§c750 coins§7]");
 				}
 				if(in_array("Demolisher", $kits)){
-					$sender->sendMessage(" §7- §4Demolisher §7[§aPurchased§7]");
+					$sender->sendMessage(" §7- §4demolisher §7[§aPurchased§7]");
 				} else {
-					$sender->sendMessage(" §7- §4Demolisher §7[§c7500 coins§7]");
+					$sender->sendMessage(" §7- §4demolisher §7[§c7500 coins§7]");
 				}
 				if(in_array("Lucky", $kits)){
-					$sender->sendMessage(" §7- §fLucky §7[§aPurchased§7]");
+					$sender->sendMessage(" §7- §flucky §7[§aPurchased§7]");
 				} else {
-					$sender->sendMessage(" §7- §fLucky §7[§c10000 coins§7]");
+					$sender->sendMessage(" §7- §flucky §7[§c10000 coins§7]");
 				}
 				if(in_array("Mad", $kits)){
-					$sender->sendMessage(" §7- §6Mad §7[§aPurchased§7]");
+					$sender->sendMessage(" §7- §6mad §7[§aPurchased§7]");
 				} else {
-					$sender->sendMessage(" §7- §6Mad §7[§c100,000 coins§7]");
+					$sender->sendMessage(" §7- §6mad §7[§c100,000 coins§7]");
 				}
-				$sender->sendMessage("                     ");
-				$sender->sendMessage("§9Kit select§7:   ");
-				$sender->sendMessage("§c/kit <KitName>    ");
-				$sender->sendMessage("§7=_=_=_=_=_=_=_=_=_");
+					$sender->sendMessage("                     ");
+					$sender->sendMessage("§9Kit select§7:   ");
+					$sender->sendMessage("§c/kit <KitName>    ");
+					$sender->sendMessage("§dCASE SENSITIVE! (lowercase)    ");
+					$sender->sendMessage("§7=====================================");
 				
                 break;
             case "coins":
