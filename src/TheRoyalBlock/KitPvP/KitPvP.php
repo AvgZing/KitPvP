@@ -728,13 +728,13 @@ class KitPvP extends PluginBase implements Listener {
 		}
 	}
 	public function onBlockPlace(BlockPlaceEvent $event){
-	if($event->getBlock()->getID() == "377"){ //Blaze Powder->Fire Resistance, 5 mins
+	if($event->getBlock()->getID() == "87"){ //Netherrack->Fire Resistance, 5 mins
 		$sender->addEffect(Effect::getEffect(12)->setAmplifier(0)->setDuration(6000)->setVisible(true));
 		$event->setCancelled(true);
-	}elseif($event->getBlock()->getID() == "353"){ //Sugar->Speed 2, 2 mins
+	}elseif($event->getBlock()->getID() == "338"){ //Sugar Cane->Speed 2, 2 mins
 		$sender->addEffect(Effect::getEffect(1)->setAmplifier(2)->setDuration(2400)->setVisible(true));
 		$event->setCancelled(true);
-	}elseif($event->getBlock()->getID() == "295"){ //Seeds->Jump Boost, 30 secs
+	}elseif($event->getBlock()->getID() == "170"){ //Hay Bale->Jump Boost, 30 secs
 		$sender->addEffect(Effect::getEffect(8)->setAmplifier(0)->setDuration(600)->setVisible(true));
 		$event->setCancelled(true);
 	}else{
