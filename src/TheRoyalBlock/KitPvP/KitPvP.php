@@ -237,7 +237,7 @@ class KitPvP extends PluginBase implements Listener {
   								}
   								if(time() - $lastTime < 1200) { // Time in Seconds!!
     								$timeLeft = time() - $lastTime;
-        							$sender->sendMessage("Please wait for your cooldown to expire! The cooldown expires in" . $timeLeft . "seconds!");
+        							$sender->sendMessage("Please wait for your cooldown to expire! You last used your kit " . $timeLeft . " seconds ago, but you must wait 1200 seconds (20 minutes) until you may use it again!!");
     								return true;
   								}
   								$data["last-execute-command"][$cmd->getName()] = time();
@@ -287,6 +287,19 @@ class KitPvP extends PluginBase implements Listener {
 							} else { //If already bought:
   
 								if($sender instanceof Player){
+									 if(is_file($dataFilezz)) {
+    									$data = yaml_parse_file($dataFilezz);
+    									$lastTime = $data["last-execute-command"][$cmd->getName()];
+  									} else {
+    									$lastTime = 0;
+  									}
+  									if(time() - $lastTime < 900) { // Time in Seconds!!
+ 									   $timeLeft = time() - $lastTime;
+									    $sender->sendMessage("Please wait for your cooldown to expire! You last used your kit " . $timeLeft . " seconds ago, but you must wait 900 seconds (15 minutes) until you may use it again!!");
+ 									   return true;
+ 									 }
+									  $data["last-execute-command"][$cmd->getName()] = time();
+									  yaml_emit_file($dataFilezz, $data);
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
 									$sender->sendMessage($this->prefix . "§fKit §o§l§bManiac §r§frecieved");
@@ -296,6 +309,7 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->getInventory()->setBoots(Item::get(305, 0, 1));
 									$sender->getInventory()->addItem(Item::get(283, 0, 1));
 									$sender->getInventory()->addItem(Item::get(322, 0, 3));
+									return true;
 								} else {
 									$sender->sendMessage($this->prefix . "§fKit is only available ingame :D");
 								}
@@ -331,6 +345,19 @@ class KitPvP extends PluginBase implements Listener {
 							} else { //If already bought:
   
 								if($sender instanceof Player){
+									  if(is_file($dataFilezz)) {
+									    $data = yaml_parse_file($dataFilezz);
+									    $lastTime = $data["last-execute-command"][$cmd->getName()];
+ 									 } else {
+ 									   $lastTime = 0;
+ 									 }
+									  if(time() - $lastTime < 600) { // Time in Seconds!!
+									    $timeLeft = time() - $lastTime;
+									    $sender->sendMessage("Please wait for your cooldown to expire! You last used your kit " . $timeLeft . " seconds ago, but you must wait 600 seconds (10 minutes) until you may use it again!!");
+									    return true;
+									  }
+									  $data["last-execute-command"][$cmd->getName()] = time();
+									  yaml_emit_file($dataFilezz, $data);
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
 									$sender->sendMessage($this->prefix . "§fKit §o§l§cPrisoner §r§frecieved");
@@ -340,6 +367,7 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->getInventory()->setChestplate(Item::get(307, 0, 1));
 									$sender->getInventory()->setLeggings(Item::get(308, 0, 1));
 									$sender->getInventory()->setBoots(Item::get(309, 0, 1));
+									return true;
 								} else {
 									$sender->sendMessage($this->prefix . "§fKit only available ingame :D");
 								}
@@ -375,6 +403,19 @@ class KitPvP extends PluginBase implements Listener {
 							} else { //If already bought:
   
 								if($sender instanceof Player){
+									  if(is_file($dataFilezz)) {
+									    $data = yaml_parse_file($dataFilezz);
+									    $lastTime = $data["last-execute-command"][$cmd->getName()];
+ 									 } else {
+ 									   $lastTime = 0;
+ 									 }
+									  if(time() - $lastTime < 300) { // Time in Seconds!!
+									    $timeLeft = time() - $lastTime;
+									    $sender->sendMessage("Please wait for your cooldown to expire! You last used your kit " . $timeLeft . " seconds ago, but you must wait 300 seconds (5 minutes) until you may use it again!!");
+									    return true;
+									  }
+									  $data["last-execute-command"][$cmd->getName()] = time();
+									  yaml_emit_file($dataFilezz, $data);
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
 									$sender->sendMessage($this->prefix . "§fKit §o§l§aSolid §r§fuse");
@@ -384,6 +425,7 @@ class KitPvP extends PluginBase implements Listener {
 									$sender->getInventory()->setChestplate(Item::get(311, 1));
 									$sender->getInventory()->setLeggings(Item::get(312, 0, 1));
 									$sender->getInventory()->setBoots(Item::get(313, 0, 1));
+									return true;
 								} else {
 									$sender->sendMessage($this->prefix . "§fKit only available ingame :D");
 								}
@@ -419,6 +461,19 @@ class KitPvP extends PluginBase implements Listener {
 							} else { //If already bought:
   
 								if($sender instanceof Player){
+									  if(is_file($dataFilezz)) {
+									    $data = yaml_parse_file($dataFilezz);
+									    $lastTime = $data["last-execute-command"][$cmd->getName()];
+ 									 } else {
+ 									   $lastTime = 0;
+ 									 }
+									  if(time() - $lastTime < 300) { // Time in Seconds!!
+									    $timeLeft = time() - $lastTime;
+									    $sender->sendMessage("Please wait for your cooldown to expire! You last used your kit " . $timeLeft . " seconds ago, but you must wait 300 seconds (5 minutes) until you may use it again!!");
+									    return true;
+									  }
+									  $data["last-execute-command"][$cmd->getName()] = time();
+									  yaml_emit_file($dataFilezz, $data);
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
 									$sender->sendMessage($this->prefix . "§fKit §o§l§4Demolisher §r§frecieved");
@@ -443,6 +498,7 @@ class KitPvP extends PluginBase implements Listener {
 									$inv->setChestplate($chestplate);
 									$inv->setLeggings($leggings);
 									$inv->setBoots($boots);
+									return true;
 								} else {
 									$sender->sendMessage($this->prefix . "§fKit only available in game:D");
 								}
