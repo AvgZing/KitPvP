@@ -240,8 +240,6 @@ class KitPvP extends PluginBase implements Listener {
   								}
   								$data["last-execute-command"][$args[0]]= time();
   								yaml_emit_file($dataFilezz, $data);
-  								$sender->removeAllEffects();
-								$sender->getInventory()->clearAll();
 								$sender->sendMessage($this->prefix . "§fKit §o§l§8Survivor §r§frecieved");
 								$sender->getInventory()->setHelmet(Item::get(298, 0, 1));
 								$sender->getInventory()->setChestplate(Item::get(299, 0, 1));
@@ -287,8 +285,6 @@ class KitPvP extends PluginBase implements Listener {
  									 }
 									  $data["last-execute-command"][$args[0]]= time();
 									  yaml_emit_file($dataFilezz, $data);
-									$sender->removeAllEffects();
-									$sender->getInventory()->clearAll();
 									$sender->sendMessage($this->prefix . "§fKit §o§l§bManiac §r§frecieved");
 									$sender->getInventory()->setHelmet(Item::get(302, 0, 1));
 									$sender->getInventory()->setChestplate(Item::get(303, 0, 1));
@@ -345,8 +341,6 @@ class KitPvP extends PluginBase implements Listener {
 									  }
 									  $data["last-execute-command"][$args[0]]= time();
 									  yaml_emit_file($dataFilezz, $data);
-									$sender->removeAllEffects();
-									$sender->getInventory()->clearAll();
 									$sender->sendMessage($this->prefix . "§fKit §o§l§cPrisoner §r§frecieved");
 									$sender->getInventory()->addItem(Item::get(272, 0, 1));
 									$sender->getInventory()->addItem(Item::get(322, 0, 1));
@@ -403,8 +397,6 @@ class KitPvP extends PluginBase implements Listener {
 									  }
 									  $data["last-execute-command"][$args[0]]= time();
 									  yaml_emit_file($dataFilezz, $data);
-									$sender->removeAllEffects();
-									$sender->getInventory()->clearAll();
 									$sender->sendMessage($this->prefix . "§fKit §o§l§aSolid §r§fuse");
 									$sender->getInventory()->addItem(Item::get(268, 0, 1));
 									$sender->getInventory()->addItem(Item::get(322, 0, 2));
@@ -461,8 +453,6 @@ class KitPvP extends PluginBase implements Listener {
 									  }
 									  $data["last-execute-command"][$args[0]]= time();
 									  yaml_emit_file($dataFilezz, $data);
-									$sender->removeAllEffects();
-									$sender->getInventory()->clearAll();
 									$sender->sendMessage($this->prefix . "§fKit §o§l§4Demolisher §r§frecieved");
 									$enchantmentdem1 = Enchantment::getEnchantment(0);
 									$enchantmentdem1->setLevel(1);
@@ -521,8 +511,6 @@ class KitPvP extends PluginBase implements Listener {
 							} else { //If already bought:
   
 								if($sender instanceof Player){
-									$sender->removeAllEffects();
-									$sender->getInventory()->clearAll();
 									$enchantmentdem1 = Enchantment::getEnchantment(0);
 									$enchantmentdem1->setLevel(1);
 									$enchantmentdem2 = Enchantment::getEnchantment(21);
@@ -579,8 +567,6 @@ class KitPvP extends PluginBase implements Listener {
 							} else { //If already bought:
   
 								if($sender instanceof Player){
-									$sender->removeAllEffects();
-									$sender->getInventory()->clearAll();
 									$sender->sendMessage($this->prefix . "§fKit §o§l§6Mad §r§frecieved");
 									$sender->removeAllEffects();
 									$sender->getInventory()->clearAll();
@@ -633,26 +619,6 @@ class KitPvP extends PluginBase implements Listener {
                 $sender->removeAllEffects();
                 $sender->setHealth(0); // Well, this works too!
                 break;
-            case "mode":
-                if (!$sender instanceof Player) {
-                if (strtolower($args[0]) == "c" && $sender->isOP()) {
-                    $sender->sendMessage($this->prefix . "§aYour gamemode has been changed to §cCREATIVE!");
-                    $sender->setGamemode(1);
-                }
-                if (strtolower($args[0]) == "s" && $sender->isOP()) {
-                    $sender->sendMessage($this->prefix . "§aYour gamemode has been changed to §cSURVIVAL!");
-                    $sender->setGamemode(0);
-                }
-                if (strtolower($args[0]) == "a" && $sender->isOP()) {
-                    $sender->sendMessage($this->prefix . "§aYour gamemode has been changed to §cADVENTURE!");
-                    $sender->setGamemode(2);
-                }
-                if (strtolower($args[0]) == "spc" && $sender->isOP()) {
-                    $sender->sendMessage($this->prefix . "§aYour gamemode has been changed to §cSPECTATOR!");
-                    $sender->setGamemode(3);
-                }
-                break;
-		}
             case "feed":
                 if ($sender->isOP() && $sender instanceof Player) {
                     $sender->setFood(20);
@@ -669,41 +635,6 @@ class KitPvP extends PluginBase implements Listener {
                     $sender->sendMessage($this->prefix . "§4You do not have permission to use this command!");
                 }
                 break;
-            case "spc":
-                if (!isset($args[0]) && $sender->hasPermission("vanish.use")) {
-                    $sender->sendMessage($this->prefix . "§6-> §f/spc §7<§a+§7 | §c-§7>");
-                }
-                if ($args[0] != "+" &&
-                        $args[0] != "-" && $sender->hasPermission("vanish.use")) {
-                    $sender->sendMessage($this->prefix . "§6-> §f/spc §7<§a+§7 | §c-§7>");
-                }
-                if ($args[0] == "-" && $sender->hasPermission("vanish.use")) {
-                    $sender->sendMessage($this->prefix . "§fYou have left §cVanishMode!");
-                    $sender->removeAllEffects();
-                    $sender->getInventory()->clearAll();
-                } elseif ($args[0] == "+" && $sender->hasPermission("vanish.use")) {
-                    $sender->removeAllEffects();
-                    $sender->getInventory()->clearAll();
-                    $sender->sendMessage($this->prefix . "§fYou have entered §aVanishMode!");
-                    $sender->setGamemode(0);
-                    $sender->addEffect(Effect::getEffect(14)->setAmplifier(1)->setDuration(199980)->setVisible(false));
-                }
-                break;
-            case "cinv":
-                if (!isset($args[0]) && $sender->isOP()) {
-                    $sender->removeAllEffects();
-                    $sender->getInventory()->clearAll();
-                    $sender->sendMessage($this->prefix . "§aInventory cleared!");
-                }
-                if (isset($args[0]) && $sender->isOP()) {
-                    $p = $args[0]->getPlayer();
-                    $name = $p->getName();
-                    $p->removeAllEffects();
-                    $p->getInventory()->clearAll();
-                    $p->sendMessage($this->prefix . "§aInventory cleared!");
-                    $sender->sendMessage($this->prefix . "§aThe inventory of §b$name §ahas been cleared.");
-                }
-             break;
               case "gethealth":
 				if($sender instanceof Player){
 					$h = $sender->getHealth() /2;
