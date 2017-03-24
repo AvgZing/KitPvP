@@ -741,5 +741,8 @@ class KitPvP extends PluginBase implements Listener {
 		$event->setCancelled(true);
 	}
     }
+	public function onBlockBreak(BlockBreakEvent $event){
+		$event->setCancelled(true);
+	}
 }
 ?>
