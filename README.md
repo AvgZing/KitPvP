@@ -3,9 +3,10 @@
 ## Misc Info
 * 5 coins per kill
 * When standing on a gold block, you get to full health
-* When you touch the ground with blaze powder you get 5 minutes of fire resistance
-* When you touch the ground with sugar you get Speed 2 for 2 minutes
-* When you touch the ground with seeds you get Jump Boost for 30 seconds
+* When you try to place netherrack you get 5 minutes of fire resistance
+* When you try to place a sugar cane you get Speed 2 for 2 minutes
+* When you try to place a hay bale you get Jump Boost for 30 seconds
+* All Block Break, Block Place, and ItemDrop events are cancelled, so the only way to retrieve an item is to buy it from the shop/get it in your kit
 * The /spawn command also clears your inventory and all effects. 
 
 ## Available kits
