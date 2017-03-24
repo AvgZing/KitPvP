@@ -21,6 +21,7 @@ use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\event\entity\EntityLevelChangeEvent; 
 use pocketmine\event\player\PlayerDropItemEvent;
+use pocketmine\event\entity\EntityDamageByEntityEvent;
 //Inventory
 use pocketmine\inventory\ChestInventory;
 use pocketmine\inventory\EnderChestInventory;
@@ -75,20 +76,15 @@ class KitPvP extends PluginBase implements Listener {
 		$cause = $entity->getLastDamageCause();
 		$event->setDeathMessage("");
 		if ($cause instanceof EntityDamageByEntityEvent) {
-            $killer = $cause->getDamager();
+            		$killer = $cause->getDamager();
 			if($killer instanceof Player){
 				$name = $killer->getName();
 				$TargetFile = new Config($this->getDataFolder()."Players/".strtolower($name{0})."/".strtolower($name).".yml", Config::YAML);	
 				$targetcoins = $TargetFile->get("Coins");
-				$newCoins = $targetcoins + 10;
-				$addedcoins = 10;
-				if($killer->hasPermission("kitpvp.doublecoins") || $killer->isOP()){
-					$newCoins = $newCoins + 5;
-					$addedcoins = 10;
-				}
+				$newCoins = $targetcoins + 5;
 				$TargetFile->set("Coins", $newCoins);
 				$TargetFile->save();
-				$Killer->sendMessage ($this->prefix."§aYou have the player §b". $Entity->getName ()."§ kills. §f->§6 +". $Addedcoins."Coins") ;
+				$Killer->sendMessage ($this->prefix."§aYou have killed the player: §b". $Entity->getName ().". §f->§6 +5 Coins") ;
       }
 		}
 	}
@@ -181,7 +177,7 @@ class KitPvP extends PluginBase implements Listener {
 							$TargetFile->set("Coins", (int) $args[1]);
 							$TargetFile->save();
 							
-							$sender->sendMessage($this->prefix."You have the coins of §6".$targetname." §fon §6".$args[1]." §fset!");
+							$sender->sendMessage($this->prefix."You have set §6".$targetname."'s coins to ".$args[1]."!");
 						} else {
 							$sender->sendMessage("Player does not exist!");
 						}
@@ -205,7 +201,7 @@ class KitPvP extends PluginBase implements Listener {
 							$TargetFile->set("Coins", (int) $newCoins);
 							$TargetFile->save();
 							
-							$sender->sendMessage($this->prefix."You have the coins of §6".$targetname." §fabout §6".$args[1]." §felevated!");
+							$sender->sendMessage($this->prefix."You have given §6".$targetname."  ".$args[1]." §fcoins!");
 						} else {
 							$sender->sendMessage("Player does not exist!");
 						}
@@ -267,7 +263,7 @@ class KitPvP extends PluginBase implements Listener {
 									$PlayerFile->set("Kits", $kits);
 									$PlayerFile->set("Coins", $newCoins);
 									$PlayerFile->save();
-									$sender->sendMessage($this->prefix."§aYou have successfully purchased the kit §bManiac §afor§6 250 coins, you can now use it at any time with the command §f/kit Maniac §ause!");
+									$sender->sendMessage($this->prefix."§aYou have successfully purchased the kit §bManiac §afor§6 250 coins, you can now use it at any time with the command §f/kit maniac!");
 								} else {
 									$sender->sendMessage($this->prefix."§cYou do not have enough coins to buy the kit §bManiac");
 									$missingcoins = 250 - $coins;
@@ -320,7 +316,7 @@ class KitPvP extends PluginBase implements Listener {
 									
 									$PlayerFile->save();
 									
-									$sender->sendMessage($this->prefix."§aYou have successfully purchased the kit §cPrisoner §afor§6 500 coins, you can use it at any time with the command §f/kit Prisoner §ause!");
+									$sender->sendMessage($this->prefix."§aYou have successfully purchased the kit §cPrisoner §afor§6 500 coins, you can use it at any time with the command §f/kit prisoner!");
 									
 								} else {
 									$sender->sendMessage($this->prefix."§cYou do not have enough coins to buy the Kit §cPrisoner");
@@ -378,7 +374,7 @@ class KitPvP extends PluginBase implements Listener {
 									
 									$PlayerFile->save();
 									
-									$sender->sendMessage($this->prefix."§aYou have sucessfully purchased the Kit §aSolid §afor§6 750 coins, you can now use it at any time with the Command §f/kit Solid §ause!");
+									$sender->sendMessage($this->prefix."§aYou have sucessfully purchased the Kit §aSolid §afor§6 750 coins, you can now use it at any time with the Command §f/kit solid!");
 									
 								} else {
 									$sender->sendMessage($this->prefix."§cYou do not have enough coins to buy the kit §aSolid");
@@ -436,7 +432,7 @@ class KitPvP extends PluginBase implements Listener {
 									
 									$PlayerFile->save();
 									
-									$sender->sendMessage($this->prefix."§aYou have sucessfully purchased the kit §4Demolisher §afor§6 7500 coins, you can use it any time with the Command §f/kit Demolisher §ause!");
+									$sender->sendMessage($this->prefix."§aYou have sucessfully purchased the kit §4Demolisher §afor§6 7500 coins, you can use it any time with the Command §f/kit demolisher!");
 									
 								} else {
 									$sender->sendMessage($this->prefix."§cYou do not have enough coins to buy the kit §4Krieger");
@@ -509,7 +505,7 @@ class KitPvP extends PluginBase implements Listener {
 									
 									$PlayerFile->save();
 									
-									$sender->sendMessage($this->prefix."§aYou have sucessfully purchased the kit §fLucky §afor§6 10000 coins, you can use it anytime with the Command §f/kit Lucky §ause!");
+									$sender->sendMessage($this->prefix."§aYou have sucessfully purchased the kit §fLucky §afor§6 10000 coins, you can use it anytime with the Command §f/kit lucky!");
 									
 								} else {
 									$sender->sendMessage($this->prefix."§cYou do not have enough coins to purchase the kit §fLucky");
@@ -567,7 +563,7 @@ class KitPvP extends PluginBase implements Listener {
 									
 									$PlayerFile->save();
 									
-									$sender->sendMessage($this->prefix."§aYou have sucessfully purchased the kit §6Mad §afor§6 100000 coins, you can use it at any time with the Command §f/kit Mad §ause!");
+									$sender->sendMessage($this->prefix."§aYou have sucessfully purchased the kit §6Mad §afor§6 100000 coins, you can use it at any time with the Command §f/kit mad!");
 									
 								} else {
 									$sender->sendMessage($this->prefix."§cYou do not have enough coins to purchase the kit §6Mad");
