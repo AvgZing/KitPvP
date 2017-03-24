@@ -729,6 +729,7 @@ class KitPvP extends PluginBase implements Listener {
 	}
 	public function onBlockPlace(BlockPlaceEvent $event){
 	if($event->getBlock()->getID() == "87"){ //Netherrack->Fire Resistance, 5 mins
+		$sender = $event->getPlayer();
 		$sender->addEffect(Effect::getEffect(12)->setAmplifier(0)->setDuration(6000)->setVisible(true));
 		$event->setCancelled(true);
 	}elseif($event->getBlock()->getID() == "338"){ //Sugar Cane->Speed 2, 2 mins
