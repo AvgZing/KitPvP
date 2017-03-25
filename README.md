@@ -55,7 +55,7 @@ Mad Kit 100000 coins (Honestly, the stuff in this kit is crazy)<br>
 * No Cooldown
 
 # Licence
-https://choosealicence.com/no-license/
+http://choosealicence.com/no-license/
 
 # Credits:
 ### Roles: Translated from german and rewrote a lot
