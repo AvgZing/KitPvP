@@ -11,16 +11,8 @@ commands:
         description: "Command to select a kit."
     spawn:
         description: "Teleport yourself to the spawn"
-    mode:
-        description: "Changes gamemode."
     feed:
         description: "Fill your hunger."
-    heal:
-        description: "Fills your health."
-    spc:
-        description: "Vanish Mode."
-    cinv:
-        description: "Clears your inventory."
     gethealth:
         description: "Gets current health."
     coins:
@@ -29,13 +21,3 @@ commands:
         description: "Sets coins to a certain value."
     addcoins:
         description: "Adds a certain number of coins."
-permissions:
-    vanish.use:
-        description: "Permission to use the Vanish command."
-        default: false
-    kits.vip:
-        description: "VIP-Kits usage."
-        default: false
-    kits.ultra:
-        description: "Use UltraKits."
-        default: false
