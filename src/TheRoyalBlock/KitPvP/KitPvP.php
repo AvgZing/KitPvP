@@ -60,7 +60,6 @@ class KitPvP extends PluginBase implements Listener {
 //=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=
     public function onEnable() {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $this->getServer()->getLogger()->info ($this->prefix."§aKitPvP enabled!");
 		@mkdir($this->getDataFolder());
 		@mkdir($this->getDataFolder()."Players");
 		@mkdir($this->getDataFolder()."Players/".strtolower($name{0}));
@@ -68,6 +67,7 @@ class KitPvP extends PluginBase implements Listener {
 		$this->saveResource("config.yml");
 	    	$cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML);
 	   	$this->prefix = $cfg->get("Prefix");
+        	$this->getServer()->getLogger()->info ($this->prefix."§aKitPvP enabled!");
     }
     public function onDisable() {
         $this->getServer()->getLogger()->info ($this->prefix."§cKitPvP disabled!");
