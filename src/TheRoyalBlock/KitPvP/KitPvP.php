@@ -55,7 +55,8 @@ use pocketmine\utils\Config;
 use pocketmine\Player;
 use pocketmine\Server;
 class KitPvP extends PluginBase implements Listener {
-    public $prefix = "§7[§cKitPvP§7] §f";
+    public $prefix;
+	
 //=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=
     public function onEnable() {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
@@ -63,7 +64,10 @@ class KitPvP extends PluginBase implements Listener {
 		@mkdir($this->getDataFolder());
 		@mkdir($this->getDataFolder()."Players");
 		@mkdir($this->getDataFolder()."Players/".strtolower($name{0}));
-		@mkdir($this->getDataFolder()."Players/c/console.yml");
+	        @mkdir($this->getDataFolder()."Players/c/console.yml");
+		$this->saveResource("config.yml");
+	    	$cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML);
+	   	$this->prefix = $cfg->get("Prefix");
     }
     public function onDisable() {
         $this->getServer()->getLogger()->info ($this->prefix."§cKitPvP disabled!");
