@@ -1,4 +1,5 @@
 # KitPvP [![Build Status](https://travis-ci.com/TheRoyalBlock/KitPvP.svg?token=tWCrDsUpVxvk6Pzq7y5j&branch=master)](https://travis-ci.com/TheRoyalBlock/KitPvP)
+# THis plugin will be rewritten soon
 ## Misc Info
 * 5 coins per kill
 * When standing on a gold block, you get to full health
