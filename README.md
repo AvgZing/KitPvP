@@ -8,13 +8,21 @@
 - [ ] Coins added per kill can be customized
 - [ ] Customizeable cooldowns
 - [ ] Customizeable item touch event stuff
-- [ ] Other Commands
+- [ ] Feed Command
+- [ ] Spawn Command
+- [ ] gethealth command
+- [ ] coins command
+- [ ] setcoins command
+- [ ] addcoins command
+- [ ] Permissions
+- [ ] Testing
 
 ## Kit System Base
 * Cancel break, place, and drop events
 * Implement cooldown
 * Coins per kill, default 5
 * Kit command
+* Kits command
 * Coin System Base
 
 
