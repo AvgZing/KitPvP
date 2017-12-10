@@ -1,6 +1,25 @@
-# KitPvP [![Build Status](https://travis-ci.com/TheRoyalBlock/KitPvP.svg?token=tWCrDsUpVxvk6Pzq7y5j&branch=master)](https://travis-ci.com/TheRoyalBlock/KitPvP)
-# THis plugin will be rewritten soon
-## Misc Info
+# KitPvP 
+## Todo
+[ ] Plugin Base
+[ ] Kit System Base
+[ ] 7 Kits
+[ ] Customizeable Kit Names
+[ ] Kit Cost customizeable
+[ ] Coins added per kill can be customized
+[ ] Customizeable cooldowns
+[ ] Customizeable item touch event stuff
+[ ] Other Commands
+
+## Kit System Base
+* Cancel break, place, and drop events
+* Implement cooldown
+* Coins per kill, default 5
+* Kit command
+* Coin System Base
+
+
+# Old Stuff:
+## Stuff
 * 5 coins per kill
 * When standing on a gold block, you get to full health
 * When you try to place netherrack you get 5 minutes of fire resistance
@@ -9,7 +28,7 @@
 * All Block Break, Block Place, and ItemDrop events are cancelled, so the only way to retrieve an item is to buy it from the shop/get it in your kit
 * The /spawn command also clears your inventory and all effects. 
 
-## Available kits
+## Kits
 Default kit is Survivor, everyone has it. <Br>
 The cheapest kit is Maniac for 250 coins<Br>
 Prisoner Kit 500 coins<Br>
