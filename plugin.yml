@@ -1,0 +1,32 @@
+name: KitPvP
+author: TheRoyalBlock
+api: [1.0.0, 2.0.0, 3.0.0, 3.0.0-ALPHA7, 3.0.0-ALPHA8, 3.0.0-ALPHA9, 3.0.0-ALPHA10, 4.0.0]
+version: 1.0
+main: TheRoyalBlock/PluginName/Main
+description: "KitPvP Plugin for an amazing server!"
+
+commands:
+  kits:
+    description: "List the kits."
+    usage: /kits
+  kit:
+    description: "Command to select a kit."
+    usage: /kit <kitname>
+  spawn:
+    description: "Teleport yourself to the spawn"
+    usage: /spawn
+  feed:
+    description: "Fill your hunger."
+    usage: /feed
+  gethealth:
+    description: "Gets current health."
+    usage: /gethealth
+  coins:
+    description: "Get current coins."
+    usage: /coins
+  setcoins:
+    description: "Sets coins to a certain value."
+    usage: /setcoins <value>
+  addcoins:
+    description: "Adds a certain number of coins."
+    usage: /addcoins <value>
