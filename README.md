@@ -1,14 +1,14 @@
 # KitPvP 
 ## Todo
-[ ] Plugin Base
-[ ] Kit System Base
-[ ] 7 Kits
-[ ] Customizeable Kit Names
-[ ] Kit Cost customizeable
-[ ] Coins added per kill can be customized
-[ ] Customizeable cooldowns
-[ ] Customizeable item touch event stuff
-[ ] Other Commands
+- [ ] Plugin Base
+- [ ] Kit System Base
+- [ ] 7 Kits
+- [ ] Customizeable Kit Names
+- [ ] Kit Cost customizeable
+- [ ] Coins added per kill can be customized
+- [ ] Customizeable cooldowns
+- [ ] Customizeable item touch event stuff
+- [ ] Other Commands
 
 ## Kit System Base
 * Cancel break, place, and drop events
